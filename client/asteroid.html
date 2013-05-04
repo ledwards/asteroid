@@ -1,0 +1,18 @@
+<head>
+  <title>swccg</title>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+</head>
+
+<body>
+  {{> board}}
+</body>
+
+<template name="board">
+  {{#each cards}}
+    {{> card}}
+  {{/each}}
+</template>
+
+<template name="card">
+<img src="{{src}}" class="card" id="{{_id}}" style="top:{{y}}; left:{{x}}"/>
+</template>
