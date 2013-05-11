@@ -1,6 +1,14 @@
 /* CSS declarations go here */
 
-.card {
+.card, .deck {
+  border: 1px solid transparent;
   height: 135px;
+  padding: 1px;
+  position: absolute;
   width: 96px;
+}
+
+.card:hover, .deck:hover {
+  border-color: blue;
+  cursor: move;
 }
