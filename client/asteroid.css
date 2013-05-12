@@ -2,10 +2,10 @@
 
 .card, .deck {
   border: 1px solid transparent;
-  height: 135px;
+  height: 70px;
   padding: 1px;
   position: absolute;
-  width: 96px;
+  width: 50px;
 }
 
 .card:hover, .deck:hover {
