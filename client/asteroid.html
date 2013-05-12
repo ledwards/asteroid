@@ -1,5 +1,5 @@
 <head>
-  <title>swccg</title>
+  <title>Asteroid CCG Engine</title>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 </head>
 
@@ -8,7 +8,7 @@
 </body>
 
 <template name="board">
-  {{> reserveDeck}}
+  {{> reserve_deck}}
 
   {{#each tableCards}}
     {{> card}}
@@ -19,6 +19,6 @@
   <img src="{{frontImageURL}}" class="card" id="{{_id}}" style="top:{{y}}; left:{{x}}"/>
 </template>
 
-<template name="reserveDeck">
-<img src="dark-side-back.gif" class="deck {{status}}" id="reserve-deck"></img>
+<template name="reserve_deck">
+  <img src="dark-side-back.gif" class="deck {{status}}" id="reserve-deck"></img>
 </template>

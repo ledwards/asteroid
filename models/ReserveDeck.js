@@ -1,4 +1,3 @@
-Table = new Meteor.Collection("cards");
 ReserveDeck = new Meteor.Collection("reserveDeck");
 
 ReserveDeck.moveToTable = function(x, y) {
