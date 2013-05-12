@@ -1,3 +1,12 @@
+Template.reserveDeck.status = function() {
+  if (ReserveDeck.isEmpty()) {
+    return "empty";
+  }
+  else {
+    return "";
+  }
+}
+
 Template.board.tableCards = function() {
   return Table.find();
 }

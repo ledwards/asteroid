@@ -8,7 +8,7 @@
 </body>
 
 <template name="board">
-  {{> reserve_deck}}
+  {{> reserveDeck}}
 
   {{#each tableCards}}
     {{> card}}
@@ -19,6 +19,6 @@
   <img src="{{frontImageURL}}" class="card" id="{{_id}}" style="top:{{y}}; left:{{x}}"/>
 </template>
 
-<template name="reserve_deck">
-  <img src="dark-side-back.gif" class="deck" id="reserve-deck"></img>
+<template name="reserveDeck">
+<img src="dark-side-back.gif" class="deck {{status}}" id="reserve-deck"></img>
 </template>

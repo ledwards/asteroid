@@ -8,5 +8,3 @@ Meteor.startup(function () {
   ReserveDeck.insert({index: 1, frontImageURL: imageRoot + "102/thumbnail.gif"});
   ReserveDeck.insert({index: 2, frontImageURL: imageRoot + "103/thumbnail.gif"});
 });
-
-// When those cards get dragged onto the board, add documents from RD to Cards collection to render it properly.
