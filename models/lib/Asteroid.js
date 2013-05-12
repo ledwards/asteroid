@@ -1,0 +1,4 @@
+Asteroid = {
+  Helper: {},
+  Template: {}
+};

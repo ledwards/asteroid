@@ -1,6 +1,16 @@
 /* CSS declarations go here */
 
-.card, .deck {
+.pile#force-pile {
+  top: 10px;
+  left: 10px;
+}
+
+.pile#reserve-deck {
+  top: 10px;
+  left: 70px;
+}
+
+.card, .pile {
   border: 1px solid transparent;
   height: 70px;
   padding: 1px;
@@ -8,17 +18,17 @@
   width: 50px;
 }
 
-.card:hover, .deck:hover {
+.card:hover, .pile:hover {
   border-color: blue;
   cursor: move;
 }
 
-.deck.empty {
+.pile.empty {
   border-color: red;
   opacity:0.4;
   filter:alpha(opacity=40); /* For IE8 and earlier */
 }
 
-.deck.empty:hover {
+.pile.empty:hover {
   cursor: default;
 }

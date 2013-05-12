@@ -3,10 +3,12 @@ Template.reserve_deck.status = function() {
     return "empty";
   }
   else {
-    return "";
+    return "non-empty";
   }
 }
 
 Template.reserve_deck.rendered = function() {
-  $("#reserve-deck").deckDraggable();
+  $("#reserve-deck.non-empty").deckDraggable({model: ReserveDeck});
 }
+
+// TODO: Figure out how to use inheritance for Templates

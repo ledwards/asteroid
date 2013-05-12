@@ -4,7 +4,7 @@ Meteor.startup(function () {
   Table.remove({});
   ReserveDeck.remove({});
 
-  ReserveDeck.insert({index: 0, frontImageURL: imageRoot + "101/thumbnail.gif"});
-  ReserveDeck.insert({index: 1, frontImageURL: imageRoot + "102/thumbnail.gif"});
-  ReserveDeck.insert({index: 2, frontImageURL: imageRoot + "103/thumbnail.gif"});
+  ReserveDeck.insert({index: 0, frontImageURL: imageRoot + "1901/thumbnail.gif"});
+  ReserveDeck.insert({index: 1, frontImageURL: imageRoot + "1902/thumbnail.gif"});
+  ReserveDeck.insert({index: 2, frontImageURL: imageRoot + "1903/thumbnail.gif"});
 });

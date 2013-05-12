@@ -12,7 +12,7 @@
       stop: function(event, ui) {
               var card = $(ui.helper);
               card.remove();
-              ReserveDeck.moveToTable(card.css("left"), card.css("top"));
+              options.model.moveToTable(card.css("left"), card.css("top"));
           }
     });
 
