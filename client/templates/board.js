@@ -1,5 +1,4 @@
 Template.board.rendered = function() {
-  $(".card").cardDraggable();
   $("#reserve-deck").deckDraggable();
 };
 
