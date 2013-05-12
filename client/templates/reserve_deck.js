@@ -6,3 +6,7 @@ Template.reserve_deck.status = function() {
     return "";
   }
 }
+
+Template.reserve_deck.rendered = function() {
+  $("#reserve-deck").deckDraggable();
+}
