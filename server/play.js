@@ -4,7 +4,8 @@ Meteor.startup(function () {
   Table.remove({});
   ReserveDeck.remove({});
 
-  ReserveDeck.insert({index: 0, frontImageURL: imageRoot + "1901/thumbnail.gif"});
-  ReserveDeck.insert({index: 1, frontImageURL: imageRoot + "1902/thumbnail.gif"});
-  ReserveDeck.insert({index: 2, frontImageURL: imageRoot + "1903/thumbnail.gif"});
+  randomNumbers = _.shuffle(_.range(60));
+  for(i = 0; i < 60; i++) {
+    ReserveDeck.insert({index: i, frontImageURL: imageRoot + (randomNumbers[i] * 5 + 1700) + "/thumbnail.gif"});
+  }
 });
