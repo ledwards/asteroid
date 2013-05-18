@@ -7,3 +7,6 @@ autopublish
 insecure
 preserve-inputs
 jquery
+mocha-web
+HTML5-History-API
+router

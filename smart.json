@@ -1,0 +1,7 @@
+{
+  "packages": {
+    "mocha-web": {},
+    "router": {},
+    "HTML5-History-API": {}
+  }
+}

@@ -4,7 +4,7 @@
 </head>
 
 <body>
-  {{> board}}
+  {{renderPage}}
 </body>
 
 <template name="board">
@@ -26,4 +26,12 @@
 
 <template name="lost_pile">
   <img src="{{imageURL}}" class="pile {{status}}" id="force-pile"></img>
+</template>
+
+<template name="tests">
+  {{> mochaTestReport}}
+</template>
+
+<template name="not_found">
+  Not found.
 </template>
