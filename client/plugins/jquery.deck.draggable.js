@@ -4,16 +4,17 @@
       helper: "clone",
 
       start: function(e, ui) {
-              $(this).css('cursor', 'move');
-              $(".ui-draggable").css('z-index', 0);
-              $(this).css('z-index', 1);
-            },
+              $card = $(ui.helper)
+              collectionName = $(ui.helper.context).data("collection");
+              pile = window[collectionName];
+              cardModel = pile.topCard();
 
-      stop: function(event, ui) {
-              var card = $(ui.helper);
-              card.remove();
-              options.model.moveToTable(card.css("left"), card.css("top"));
-          }
+              $card.css('cursor', 'move');
+              $(".ui-draggable").css('z-index', 0);
+              $card.css('z-index', 1);
+              $card.data("collection", collectionName);
+              $card.attr("id", cardModel._id);
+            }
     });
 
     return this;

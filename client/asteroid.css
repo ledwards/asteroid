@@ -1,5 +1,10 @@
 /* CSS declarations go here */
 
+#table {
+  height: 800px;
+  width: 600px;
+}
+
 .pile#force-pile {
   top: 10px;
   left: 10px;
@@ -18,7 +23,7 @@
   width: 50px;
 }
 
-.card:hover, .pile:hover {
+.card:hover, .pile:hover, .over {
   border-color: blue;
   cursor: move;
 }

@@ -1,10 +1,16 @@
 (function($) {
   $.fn.deckDroppable = function(options) {
     this.droppable({
-      drop: function(e, ui) {
+      over: function() {
+              $(this).addClass("over");
+             },
+
+      drop: function(event, ui) {
               var $card = $(ui.helper);
-              var cardModel = Table.findOne($card.attr("id"));
-              options.model.addToTop(cardModel);
+              var sourceCollection = window[$card.data("collection")] || Table;
+              var cardModel = sourceCollection.findOne($card.attr("id"));
+
+              options.model.addToTop(cardModel, sourceCollection);
               $card.remove();
             }
     });
@@ -12,5 +18,3 @@
     return this;
   }
 })(jQuery);
-
-// TODO: Drag directly from pile to pile
