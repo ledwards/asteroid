@@ -1,6 +1,11 @@
 /* CSS declarations go here */
 
+body {
+  padding: 90px;
+}
+
 #table {
+  background-color: #00CCCC;
   height: 800px;
   width: 600px;
 }
