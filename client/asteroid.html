@@ -7,33 +7,6 @@
   {{renderPage}}
 </body>
 
-<template name="board">
-  {{> lost_pile}}
-  {{> reserve_deck}}
-
-  <div id="table">
-    {{#each table}}
-      {{> card}}
-    {{/each}}
-  </div>
-</template>
-
-<template name="card">
-  <img src="{{frontImageURL}}" class="pile" id="{{_id}}" style="top:{{y}}; left:{{x}}"/>
-</template>
-
-<template name="reserve_deck">
-  <img src="{{imageURL}}" class="pile {{status}}" id="reserve-deck" data-collection="ReserveDeck"></img>
-</template>
-
-<template name="lost_pile">
-  <img src="{{imageURL}}" class="pile {{status}}" id="force-pile", data-collection="LostPile"></img>
-</template>
-
 <template name="tests">
   {{> mochaTestReport}}
-</template>
-
-<template name="not_found">
-  Not found.
 </template>

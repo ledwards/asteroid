@@ -1,0 +1,10 @@
+<template name="board">
+  {{> lost_pile}}
+  {{> reserve_deck}}
+
+  <div id="table">
+    {{#each table}}
+      {{> card}}
+    {{/each}}
+  </div>
+</template>
