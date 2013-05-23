@@ -1,8 +1,7 @@
 <template name="board">
-  {{> lost_pile}}
-  {{> reserve_deck}}
+  <div id="board">
+    {{> life_force}}
 
-  <div id="table">
     {{#each table}}
       {{> card}}
     {{/each}}

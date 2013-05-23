@@ -1,36 +1,58 @@
 /* CSS declarations go here */
 
 body {
-  padding: 90px;
+  padding: 0px;
 }
 
-#table {
+#board {
   background-color: #00CCCC;
-  height: 800px;
-  width: 600px;
+  height: 600px;
+  width: 1280px;
+  position: relative;
+  z-index: 0;
 }
 
-.pile#force-pile {
-  top: 10px;
+#life-force {
+  background-color: rgba(0,0,0,0.75);
+  width: 195px;
+  height: 155px;
+  position: absolute;
+  z-index: 1;
+}
+
+.pile#used-pile {
+  top: 0px;
+  left: 95px;
+  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+}
+
+.pile#lost-pile {
+  top: 70px;
   left: 10px;
 }
 
 .pile#reserve-deck {
-  top: 10px;
+  top: 70px;
   left: 70px;
+}
+
+.pile#force-pile {
+  top: 70px;
+  left: 130px;
 }
 
 .card, .pile {
   border: 1px solid transparent;
   height: 70px;
   padding: 1px;
-  position: absolute;
   width: 50px;
+  position: absolute;
 }
 
 .card:hover, .pile:hover, .over {
   border-color: blue;
-  cursor: move;
 }
 
 .pile.empty {
@@ -42,3 +64,8 @@ body {
 .pile.empty:hover {
   cursor: default;
 }
+
+.ui-draggable:hover {
+  cursor: move;
+}
+

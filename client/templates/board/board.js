@@ -11,5 +11,5 @@ Template.board.reserve_deck = function() {
 };
 
 Template.board.rendered = function() {
-  $("#table").tableDroppable();
+  $(this.firstNode).tableDroppable();
 }

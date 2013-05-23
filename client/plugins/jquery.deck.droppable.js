@@ -12,7 +12,9 @@
 
               options.model.addToTop(cardModel, sourceCollection);
               $card.remove();
-            }
+            },
+
+      greedy: true
     });
 
     return this;

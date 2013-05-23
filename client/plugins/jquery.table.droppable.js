@@ -9,7 +9,7 @@
                 $card.remove();
                 sourceCollection.moveToTable($card.css("left"), $card.css("top"));
               }
-          }
+            }
     });
 
     return this;
