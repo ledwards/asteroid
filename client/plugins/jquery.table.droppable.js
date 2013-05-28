@@ -2,12 +2,15 @@
   $.fn.tableDroppable = function(options) {
     this.droppable({
       drop: function(event, ui) {
-              var $card = $(ui.helper);
-              var sourceCollection = window[$card.data("collection")];
+              $card = $(ui.helper);
+              sourceCollection = window[$card.data("collection")];
+              $lifeForce = $("#life-force");
 
               if (sourceCollection) {
                 $card.remove();
-                sourceCollection.moveToTable($card.css("left"), $card.css("top"));
+                x = parseInt($card.css("left")) + parseInt($lifeForce.css("left"));
+                y = parseInt($card.css("top")) + parseInt($lifeForce.css("top"));
+                sourceCollection.moveToTable(x + "px", y + "px");
               }
             }
     });

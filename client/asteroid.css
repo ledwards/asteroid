@@ -17,6 +17,8 @@ body {
   width: 195px;
   height: 155px;
   position: absolute;
+  top: 445px;
+  left: 0;
   z-index: 1;
 }
 
