@@ -10,7 +10,7 @@
               cardModel = pile.topCard();
 
               $card.css('cursor', 'move');
-              $(".ui-draggable").css('z-index', 0);
+              $(".card,.pile").css('z-index', 0);
               $card.css('z-index', 1);
               $card.data("collection", collectionName);
               $card.attr("id", cardModel._id);

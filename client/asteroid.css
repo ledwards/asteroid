@@ -63,6 +63,7 @@ body {
 
 .card:hover, .pile:hover, .over {
   border-color: blue;
+  z-index: 10;
 }
 
 .pile.empty {
@@ -78,4 +79,3 @@ body {
 .ui-draggable:hover {
   cursor: move;
 }
-
