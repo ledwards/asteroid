@@ -6,9 +6,11 @@
              },
 
       drop: function(event, ui) {
-              var $card = $(ui.helper);
-              var sourceCollection = window[$card.data("collection")] || Table;
-              var cardModel = sourceCollection.findOne($card.attr("id"));
+              $card = $(ui.helper);
+              $side = $card.closest(".side");
+              table = window[$side.data("side") + "Table"];
+              sourceCollection = window[$card.data("collection")] || table;
+              cardModel = sourceCollection.findOne($card.attr("id"));
 
               options.model.addToTop(cardModel, sourceCollection);
               $card.remove();

@@ -12,17 +12,25 @@ body {
   z-index: 0;
 }
 
-#life-force {
+.life-force {
   background-color: rgba(0,0,0,0.75);
   width: 195px;
   height: 155px;
   position: absolute;
-  top: 445px;
-  left: 0;
-  z-index: 1;
+  z-index: 10;
 }
 
-.pile#used-pile {
+#dark-life-force {
+  top: 445px;
+  left: 0;
+}
+
+#light-life-force {
+  top: 0px;
+  left: 0;
+}
+
+.pile.used-pile {
   top: 0px;
   left: 95px;
   transform: rotate(270deg);
@@ -30,17 +38,17 @@ body {
   -moz-transform: rotate(270deg);
 }
 
-.pile#lost-pile {
+.pile.lost-pile {
   top: 70px;
   left: 10px;
 }
 
-.pile#reserve-deck {
+.pile.reserve-deck {
   top: 70px;
   left: 70px;
 }
 
-.pile#force-pile {
+.pile.force-pile {
   top: 70px;
   left: 130px;
 }

@@ -1,8 +1,17 @@
-<template name="life_force">
-  <div id="life-force">
-    {{> lost_pile}}
-    {{> reserve_deck}}
-    {{> force_pile}}
-    {{> used_pile}}
+<template name="dark_life_force">
+  <div id="dark-life-force" class="life-force">
+    {{> dark_lost_pile}}
+    {{> dark_reserve_deck}}
+    {{> dark_force_pile}}
+    {{> dark_used_pile}}
+  </div>
+</template>
+
+<template name="light_life_force">
+  <div id="light-life-force" class="life-force">
+    {{> light_lost_pile}}
+    {{> light_reserve_deck}}
+    {{> light_force_pile}}
+    {{> light_used_pile}}
   </div>
 </template>

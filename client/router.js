@@ -1,5 +1,5 @@
 Meteor.Router.add({
   "/tests": "tests",
-  "/": "board",
+  "/": "game",
   "*": "not_found"
 });

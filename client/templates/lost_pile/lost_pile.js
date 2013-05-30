@@ -1,15 +1,32 @@
-Asteroid.Template.Pile.compose(Template.lost_pile, LostPile);
+Asteroid.Template.Pile.compose(Template.dark_lost_pile, DarkLostPile);
 
-Template.lost_pile.rendered = function() {
-  $(this.firstNode).deckDraggable({model: LostPile});
-  $(this.firstNode).deckDroppable({model: LostPile});
+Template.dark_lost_pile.rendered = function() {
+  $(this.firstNode).deckDraggable({model: DarkLostPile});
+  $(this.firstNode).deckDroppable({model: DarkLostPile});
 }
 
-Template.lost_pile.imageURL = function() {
-  if(LostPile.isEmpty()) {
+Template.dark_lost_pile.imageURL = function() {
+  if(DarkLostPile.isEmpty()) {
     return "dark-side-back.gif";
   }
   else {
-    return LostPile.topCard().frontImageURL;
+    return DarkLostPile.topCard().frontImageURL;
+  }
+}
+
+
+Asteroid.Template.Pile.compose(Template.light_lost_pile, LightLostPile);
+
+Template.light_lost_pile.rendered = function() {
+  $(this.firstNode).deckDraggable({model: LightLostPile});
+  $(this.firstNode).deckDroppable({model: LightLostPile});
+}
+
+Template.light_lost_pile.imageURL = function() {
+  if(LightLostPile.isEmpty()) {
+    return "light-side-back.gif";
+  }
+  else {
+    return LightLostPile.topCard().frontImageURL;
   }
 }
