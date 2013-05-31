@@ -1,25 +1,25 @@
 Template.game.dark_table = function() {
-  return DarkTable.find();
+  return Asteroid.Collection.Dark.Table.find();
 };
 
 Template.game.dark_lost_pile = function() {
-  return DarkLostPile.findOne({}, {sort: {index: -1}});
+  return Asteroid.Collection.Dark.LostPile.findOne({}, {sort: {index: -1}});
 };
 
 Template.game.dark_reserve_deck = function() {
-  return DarkReserveDeck.findOne({}, {sort: {index: -1}});
+  return Asteroid.Collection.Dark.ReserveDeck.findOne({}, {sort: {index: -1}});
 };
 
 Template.game.light_table = function() {
-  return LightTable.find();
+  return Asteroid.Collection.Light.Table.find();
 };
 
 Template.game.light_lost_pile = function() {
-  return LightLostPile.findOne({}, {sort: {index: -1}});
+  return Asteroid.Collection.Light.LostPile.findOne({}, {sort: {index: -1}});
 };
 
 Template.game.light_reserve_deck = function() {
-  return LightReserveDeck.findOne({}, {sort: {index: -1}});
+  return Asteroid.Collection.Light.ReserveDeck.findOne({}, {sort: {index: -1}});
 };
 
 Template.game.rendered = function() {

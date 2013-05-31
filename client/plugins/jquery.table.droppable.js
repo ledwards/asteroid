@@ -4,8 +4,10 @@
       drop: function(event, ui) {
               $card = $(ui.helper);
               $side = $card.closest(".side");
-              sourceCollection = window[$card.data("collection")];
-              table = window[$side.data("side") + "Table"];
+              sideName = $side.data("side");
+              collectionName = $card.data("collection");
+              table = Asteroid.Collection[sideName]["Table"];
+              sourceCollection = Asteroid.Collection[sideName][collectionName];
               $lifeForce = $side.find(".life-force");
 
               if (sourceCollection) {

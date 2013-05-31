@@ -5,8 +5,9 @@
 
       start: function(e, ui) {
               $card = $(ui.helper)
+              sideName = $card.closest(".side").data("side");
               collectionName = $(ui.helper.context).data("collection");
-              pile = window[collectionName];
+              pile = Asteroid.Collection[sideName][collectionName];
               cardModel = pile.topCard();
 
               $card.css('cursor', 'move');

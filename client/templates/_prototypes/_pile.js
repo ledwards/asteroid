@@ -10,6 +10,10 @@ Asteroid.Template.Pile = function(template, model) {
        return "non-empty";
      }
    }, this);
+
+  template.owner = $.proxy(function() {
+    return $(this.template);//.closest(".side").data("side");
+  }, this);
 };
 
 Asteroid.Template.Pile.compose = function(template, model) {

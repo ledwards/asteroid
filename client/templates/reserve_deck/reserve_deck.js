@@ -1,8 +1,8 @@
-Asteroid.Template.Pile.compose(Template.dark_reserve_deck, DarkReserveDeck);
+Asteroid.Template.Pile.compose(Template.dark_reserve_deck, Asteroid.Collection.Dark.ReserveDeck);
 
 Template.dark_reserve_deck.rendered = function() {
-  $(this.firstNode).deckDraggable({model: DarkReserveDeck});
-  $(this.firstNode).deckDroppable({model: DarkReserveDeck});
+  $(this.firstNode).deckDraggable({model: Asteroid.Collection.Dark.ReserveDeck});
+  $(this.firstNode).deckDroppable({model: Asteroid.Collection.Dark.ReserveDeck});
 }
 
 Template.dark_reserve_deck.imageURL = function() {
@@ -10,11 +10,11 @@ Template.dark_reserve_deck.imageURL = function() {
 }
 
 
-Asteroid.Template.Pile.compose(Template.light_reserve_deck, LightReserveDeck);
+Asteroid.Template.Pile.compose(Template.light_reserve_deck, Asteroid.Collection.Light.ReserveDeck);
 
 Template.light_reserve_deck.rendered = function() {
-  $(this.firstNode).deckDraggable({model: LightReserveDeck});
-  $(this.firstNode).deckDroppable({model: LightReserveDeck});
+  $(this.firstNode).deckDraggable({model: Asteroid.Collection.Light.ReserveDeck});
+  $(this.firstNode).deckDroppable({model: Asteroid.Collection.Light.ReserveDeck});
 }
 
 Template.light_reserve_deck.imageURL = function() {
