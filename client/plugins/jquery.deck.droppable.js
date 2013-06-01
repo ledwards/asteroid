@@ -9,7 +9,7 @@
               $card = $(ui.helper);
               $side = $card.closest(".side");
               sideName = $side.data("side");
-              table = Asteroid.Collection[sideName]["Table"];
+              collectionName = $card.data("collection") || "Table";
               sourceCollection = Asteroid.Collection[sideName][collectionName];
               cardModel = sourceCollection.findOne($card.attr("id"));
 
