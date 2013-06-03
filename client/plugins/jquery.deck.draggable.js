@@ -5,8 +5,12 @@
 
       start: function(e, ui) {
               $card = $(ui.helper)
-              sideName = $card.closest(".side").data("side");
+
+              $side = $card.closest(".side");
+              sideName = $side.data("side");
+
               collectionName = $(ui.helper.context).data("collection");
+
               pile = Asteroid.Collection[sideName][collectionName];
               cardModel = pile.topCard();
 

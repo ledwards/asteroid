@@ -12,7 +12,9 @@ Asteroid.Template.Pile = function(template, model) {
    }, this);
 
   template.owner = $.proxy(function() {
-    return $(this.template);//.closest(".side").data("side");
+    $side = $card.closest(".side");
+    sideName = $side.data("side");
+    return Asteroid.Collection[sideName];
   }, this);
 };
 
