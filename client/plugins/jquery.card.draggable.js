@@ -10,11 +10,8 @@
 
       stop: function(event, ui){
         $card = $(this);
-
-        $side = $card.closest(".side");
-        sideName = $side.data("side");
-
-        table = Asteroid.Collection[sideName]["Table"];
+        side = $card.side();
+        table = side["Table"];
         table.update({_id: $card.attr("id")}, {$set: {x: $card.css("left"), y: $card.css("top")}});
       }
     });

@@ -3,17 +3,16 @@
     this.droppable({
       drop: function(event, ui) {
               $card = $(ui.helper);
-
-              $side = $card.closest(".side");
-              sideName = $side.data("side");
+              side = $card.side();
 
               collectionName = $card.data("collection");
-              sourceCollection = Asteroid.Collection[sideName][collectionName];
+              sourceCollection = side[collectionName];
 
-              $lifeForce = $side.find(".life-force");
-              table = Asteroid.Collection[sideName]["Table"];
+              sideName = $card.data("side");
+              table = side["Table"];
 
               if (sourceCollection) {
+                $lifeForce = $card.closest(".life-force");
                 $card.remove();
                 x = parseInt($card.css("left")) + parseInt($lifeForce.css("left"));
                 y = parseInt($card.css("top")) + parseInt($lifeForce.css("top"));

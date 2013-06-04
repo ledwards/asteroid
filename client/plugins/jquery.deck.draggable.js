@@ -5,13 +5,8 @@
 
       start: function(e, ui) {
               $card = $(ui.helper)
-
-              $side = $card.closest(".side");
-              sideName = $side.data("side");
-
               collectionName = $(ui.helper.context).data("collection");
-
-              pile = Asteroid.Collection[sideName][collectionName];
+              pile = $card.collection({namespace: $card.side()});
               cardModel = pile.topCard();
 
               $card.css('cursor', 'move');
@@ -19,7 +14,12 @@
               $card.css('z-index', 1);
               $card.data("collection", collectionName);
               $card.attr("id", cardModel._id);
-            }
+            },
+
+      end: function(e, ui) {
+             $card = $(ui.helper)
+             $card.data("collection", null);
+           }
     });
 
     return this;

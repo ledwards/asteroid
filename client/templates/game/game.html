@@ -1,17 +1,13 @@
 <template name="game">
   <div id="board">
-    <div class="side" data-side="Dark">
-      {{> dark_life_force}}
-      {{#each dark_table}}
-        {{> card}}
-        {{/each}}
-    </div>
-
-    <div class="side" data-side="Light">
-      {{> light_life_force}}
-      {{#each light_table}}
-        {{> card}}
+    {{> dark_life_force}}
+    {{#each dark_table}}
+      {{> card}}
       {{/each}}
-    </div>
+
+    {{> light_life_force}}
+    {{#each light_table}}
+      {{> card}}
+    {{/each}}
   </div>
 </template>

@@ -3,19 +3,20 @@ function MeteorAddonException(message) {
    this.name = "MeteorAddonException";
 }
 
-
 (function($) {
   $.fn.collection = function(options) {
-    options = typeof(options) !== "undefined" ? options : {namespace: undefined};
+    defaults = {namespace: window};
+    options = typeof(options) !== "undefined" ? options : defaults;
     collectionName = this.data("collection");
+    namespace = options["namespace"];
 
     if(collectionName) {
-      if(typeof options["namespace"] !== "undefined") {
-        namespaces = options["namespace"].split(".").concat(collectionName);
+      if(typeof namespace == "string") {
+        namespaces = namespace.split(".").concat(collectionName);
         return _.reduce(namespaces, function(memo, n){return memo[n]}, window);
       }
       else {
-        return window[collectionName];
+        return namespace[collectionName];
       }
     }
 
@@ -24,6 +25,5 @@ function MeteorAddonException(message) {
     }
   }
 })(jQuery);
-
 
 // TODO: Add a jQuery method for retrieving the Template object for any DOM element

@@ -8,11 +8,10 @@
       drop: function(event, ui) {
               $card = $(ui.helper);
 
-              $side = $card.closest(".side");
-              sideName = $side.data("side");
+              side = $card.side();
 
               collectionName = $card.data("collection") || "Table";
-              sourceCollection = Asteroid.Collection[sideName][collectionName];
+              sourceCollection = side[collectionName];
 
               cardModel = sourceCollection.findOne($card.attr("id"));
 
