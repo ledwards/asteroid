@@ -7,12 +7,8 @@
 
       drop: function(event, ui) {
               $card = $(ui.helper);
-
               side = $card.side();
-
-              collectionName = $card.data("collection") || "Table";
-              sourceCollection = side[collectionName];
-
+              sourceCollection = $card.pile();
               cardModel = sourceCollection.findOne($card.attr("id"));
 
               options.model.addToTop(cardModel, sourceCollection);

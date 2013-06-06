@@ -9,7 +9,7 @@
 (function($) {
   $.fn.pile = function(options) {
     $pile = $(this);
-    side = $card.data("side");
+    side = $card.side();
     collectionName = $card.data("collection");
     return side[collectionName];
   }

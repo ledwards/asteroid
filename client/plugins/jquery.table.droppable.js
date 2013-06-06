@@ -4,14 +4,10 @@
       drop: function(event, ui) {
               $card = $(ui.helper);
               side = $card.side();
-
-              collectionName = $card.data("collection");
-              sourceCollection = side[collectionName];
-
-              sideName = $card.data("side");
+              sourceCollection = $card.pile();
               table = side["Table"];
 
-              if (sourceCollection) {
+              if (typeof sourceCollection != "undefined" && sourceCollection != side["Table"]) {
                 $lifeForce = $card.closest(".life-force");
                 $card.remove();
                 x = parseInt($card.css("left")) + parseInt($lifeForce.css("left"));
