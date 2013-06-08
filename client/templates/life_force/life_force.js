@@ -3,5 +3,5 @@ Template.dark_life_force.rendered = function() {
 }
 
 Template.light_life_force.rendered = function() {
-  $(this.firstNode).draggable();
+  $(this.firstNode).draggable({ containment: "#board" });
 }

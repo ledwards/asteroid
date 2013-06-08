@@ -1,6 +1,8 @@
 (function($) {
   $.fn.cardDraggable = function(options) {
     this.draggable({
+      containment: "#board",
+
       start: function(event, ui){
         $card = $(this);
         $card.css('cursor', 'move');

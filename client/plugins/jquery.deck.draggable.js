@@ -1,6 +1,8 @@
 (function($) {
   $.fn.deckDraggable = function(options) {
     this.draggable({
+      containment: "#board",
+
       helper: "clone",
 
       start: function(e, ui) {
