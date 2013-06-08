@@ -1,6 +1,6 @@
 <template name="game">
   <div id="board">
-    <div id="dark-hand" class="hand" data-side="Dark">
+    <div id="dark-hand" class="hand container" data-side="Dark">
       {{#each dark_hand}}
         {{> card}}
       {{/each}}
@@ -12,7 +12,7 @@
       {{> card}}
     {{/each}}
 
-    <div id="light-hand" class="hand" data-side="Light">
+    <div id="light-hand" class="hand container" data-side="Light">
       {{#each light_hand}}
         {{> card}}
       {{/each}}
