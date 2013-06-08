@@ -2,11 +2,13 @@ Meteor.startup(function () {
   imageRoot = "http://s3.amazonaws.com/ledwards-swccgvkit-production/card_images/"
 
   Asteroid.Collection.Dark.Table.remove({});
+  Asteroid.Collection.Dark.Hand.remove({});
   Asteroid.Collection.Dark.ReserveDeck.remove({});
   Asteroid.Collection.Dark.LostPile.remove({});
   Asteroid.Collection.Dark.UsedPile.remove({});
 
   Asteroid.Collection.Light.Table.remove({});
+  Asteroid.Collection.Light.Hand.remove({});
   Asteroid.Collection.Light.ReserveDeck.remove({});
   Asteroid.Collection.Light.LostPile.remove({});
   Asteroid.Collection.Light.UsedPile.remove({});

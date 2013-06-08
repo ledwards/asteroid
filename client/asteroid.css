@@ -81,3 +81,33 @@ body {
 .ui-draggable:hover {
   cursor: move;
 }
+
+.hand {
+  background-color: rgba(0,0,0,0.75);
+  min-width: 280px;
+  height: 75px;
+  left: 500px;
+  padding: 5px;
+  position: absolute;
+  z-index: 10;
+}
+
+#dark-hand {
+  top: 515px;
+}
+
+#light-hand {
+  top: 0px;
+}
+
+.hand .card {
+  left: 0px !important;
+  position: static !important;
+  top: 0px !important;
+
+  margin-left: -40px;
+}
+
+.hand .card:first-child {
+  margin-left: 0px;
+}

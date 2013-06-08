@@ -25,5 +25,3 @@ function MeteorAddonException(message) {
     }
   }
 })(jQuery);
-
-// TODO: Add a jQuery method for retrieving the Template object for any DOM element
