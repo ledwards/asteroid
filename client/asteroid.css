@@ -72,16 +72,16 @@ body {
 }
 
 .pile:hover, .pile.over {
-  box-shadow: 0px 0px 30px #0078a3;
-  -moz-box-shadow: 0 0 30px #0078a3;
-  -webkit-box-shadow: 0 0 30px #0078a3;
+  box-shadow: 0px 0px 10px #0078a3;
+  -moz-box-shadow: 0 0 10px #0078a3;
+  -webkit-box-shadow: 0 0 10px #0078a3;
   z-index: 10;
 }
 
 .pile.empty {
-  box-shadow: 0px 0px 30px #f54400;
-  -moz-box-shadow: 0 0 30px #f54400
-  -webkit-box-shadow: 0 0 30px #f54400;
+  box-shadow: 0px 0px 10px #f54400;
+  -moz-box-shadow: 0 0 10px #f54400
+  -webkit-box-shadow: 0 0 10px #f54400;
   opacity:0.4;
   filter:alpha(opacity=40); /* For IE8 and earlier */
 }
