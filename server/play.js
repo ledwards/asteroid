@@ -21,8 +21,8 @@ Meteor.startup(function () {
     Asteroid.Collection.Light.ReserveDeck.insert({index: i, frontImageURL: imageRoot + (randomNumbers[i] * 5 + 100) + "/thumbnail.gif", side: "Light"});
   };
 
-  Asteroid.Collection.Dark.LostPile.insert({index: 0, frontImageURL: imageRoot + "2964/thumbnail.gif"});
-  Asteroid.Collection.Light.LostPile.insert({index: 0, frontImageURL: imageRoot + "964/thumbnail.gif"});
+  Asteroid.Collection.Dark.LostPile.insert({index: 0, frontImageURL: imageRoot + "2964/thumbnail.gif", side: "Dark"});
+  Asteroid.Collection.Light.LostPile.insert({index: 0, frontImageURL: imageRoot + "1280/thumbnail.gif", side: "Light"});
 
   Asteroid.Players.insert({ name: "Player 1", side: "Dark" });
   Asteroid.Players.insert({ name: "Player 2", side: "Light" });
