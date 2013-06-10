@@ -1,3 +1,7 @@
 <template name="card">
-  <img src="{{frontImageURL}}" class="card" id="{{_id}}" style="top:{{y}}; left:{{x}}" data-side = {{side}} data-collection="Table"/>
+  <img src="{{frontImageURL}}" title="" class="card" id="{{_id}}" style="top:{{y}}; left:{{x}}" data-side="{{side}}" data-collection="Table"/>
+</template>
+
+<template name="hand_card">
+  <img src="{{frontImageURL}}" title="" class="card" id="{{_id}}" style="top:{{y}}px; left:{{x}}px" data-side="{{side}}" data-collection="Hand"/>
 </template>

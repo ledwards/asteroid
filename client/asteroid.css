@@ -111,9 +111,9 @@ body {
 }
 
 .hand .card {
-  left: 0px !important;
-  position: static !important;
-  top: 0px !important;
+  left: 0px;
+  position: static;
+  top: 0px;
   margin-left: -40px;
 }
 

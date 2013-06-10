@@ -12,9 +12,9 @@
 
       stop: function(event, ui){
         $card = $(this);
+        sourceCollection = $card.pile();
         side = $card.side();
         table = side["Table"];
-        table.update({_id: $card.attr("id")}, {$set: {x: $card.css("left"), y: $card.css("top")}});
       }
     });
 
