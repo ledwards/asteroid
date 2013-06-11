@@ -8,10 +8,10 @@ body {
 #board {
   background-image: url('/background.jpg');
   background-position: center;
-  height: 600px;
+  height: 690px;
   margin: 0 auto;
   position: relative;
-  width: 1280px;
+  width: 1024px;
 }
 
 .life-force {
@@ -22,7 +22,7 @@ body {
 }
 
 #dark-life-force {
-  top: 440px;
+  top: 530px;
   left: 5px;
 }
 
@@ -103,7 +103,7 @@ body {
 }
 
 #dark-hand {
-  top: 515px;
+  top: 605px;
 }
 
 #light-hand {
