@@ -1,8 +1,10 @@
 Asteroid.Template.Pile.compose(Template.dark_lost_pile, Asteroid.Collection.Dark.LostPile);
 
 Template.dark_lost_pile.rendered = function() {
-  $(this.firstNode).deckDraggable({model: Asteroid.Collection.Dark.LostPile});
-  $(this.firstNode).deckDroppable({model: Asteroid.Collection.Dark.LostPile});
+  $pile = $(this.firstNode);
+  $pile.deckDraggable({model: Asteroid.Collection.Dark.LostPile});
+  $pile.deckDroppable({model: Asteroid.Collection.Dark.LostPile});
+  $pile.cardTooltip();
 }
 
 Template.dark_lost_pile.imageURL = function() {
@@ -18,8 +20,10 @@ Template.dark_lost_pile.imageURL = function() {
 Asteroid.Template.Pile.compose(Template.light_lost_pile, Asteroid.Collection.Light.LostPile);
 
 Template.light_lost_pile.rendered = function() {
-  $(this.firstNode).deckDraggable({model: Asteroid.Collection.Light.LostPile});
-  $(this.firstNode).deckDroppable({model: Asteroid.Collection.Light.LostPile});
+  $pile = $(this.firstNode);
+  $pile.deckDraggable({model: Asteroid.Collection.Light.LostPile});
+  $pile.deckDroppable({model: Asteroid.Collection.Light.LostPile});
+  $pile.cardTooltip();
 }
 
 Template.light_lost_pile.imageURL = function() {

@@ -124,5 +124,23 @@ body {
 .container {
   background-color: rgba(255,255,255,0.2);
   border-radius: 10px;
+  -webkit-border-radius: 10px;
   z-index: 10;
+}
+
+.card-enlarged {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border: none !important;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  max-height: none !important;
+  max-width: none !important;
+  padding: 3px 0;
+  z-index: 100;
+}
+
+.card-enlarged img {
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  display: block;
 }

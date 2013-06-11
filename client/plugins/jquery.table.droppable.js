@@ -7,7 +7,7 @@
               sourceCollection = $card.pile();
               table = side["Table"];
               $container = $card.closest(".container");
-              x = parseInt($card.css("left")) + parseInt($container.css("left")) + "px";
+              x = parseInt($card.css("left")) + parseInt($container.css("left")) - parseInt($card.css("margin-left")) + "px";
               y = parseInt($card.css("top")) + parseInt($container.css("top")) + "px";
 
               if (typeof sourceCollection != "undefined" && sourceCollection == side["Hand"]) {

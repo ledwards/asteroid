@@ -8,6 +8,8 @@
         $card.css('cursor', 'move');
         $(".card, .pile").css('z-index', 0);
         $card.css('z-index', 100);
+        $card.qtip("hide");
+        $card.qtip("disable");
       },
 
       stop: function(event, ui){
