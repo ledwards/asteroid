@@ -144,3 +144,46 @@ body {
   -webkit-border-radius: 12px;
   display: block;
 }
+
+.context-menu {
+  background: rgba(255,255,255,0.6);
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  font-weight: bold;
+}
+
+.context-menu .qtip-content {
+  padding: 0px;
+  width: 180px;
+}
+
+.context-menu ul {
+  background: none;
+  border: none;
+}
+
+.context-menu ul.context-menu-items {
+  width: 100px;
+}
+
+.context-menu ul.context-menu-subitems {
+  width: 75px;
+}
+
+.context-menu .ui-menu-divider {
+  border: none;
+  margin: 0;
+}
+
+.context-menu input {
+  height: 12px;
+  margin-right: 5px;
+  width: 20px;
+}
+
+.context-menu label {
+  line-height: 18px;
+  position: relative;
+  top: 1px;
+}

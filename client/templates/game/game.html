@@ -1,5 +1,5 @@
 <template name="game">
-  <div id="board">
+  <div id="board" oncontextmenu="return false">
     <div id="dark-hand" class="hand container" data-side="Dark">
       {{#each dark_hand}}
         {{> hand_card}}
