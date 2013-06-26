@@ -3,6 +3,7 @@ Asteroid.Template.Pile.compose(Template.dark_reserve_deck, Asteroid.Collection.D
 Template.dark_reserve_deck.rendered = function() {
   var $pile = $(this.firstNode);
   $pile.deckDroppable({model: Asteroid.Collection.Dark.ReserveDeck});
+  $pile.deckDraggable({model: Asteroid.Collection.Dark.ReserveDeck});
   $pile.contextMenu(["activate", "lose", "draw", "peek", "shuffle", "search"], "reserve-deck");
 }
 
@@ -16,6 +17,7 @@ Asteroid.Template.Pile.compose(Template.light_reserve_deck, Asteroid.Collection.
 Template.light_reserve_deck.rendered = function() {
   var $pile = $(this.firstNode);
   $pile.deckDroppable({model: Asteroid.Collection.Light.ReserveDeck});
+  $pile.deckDraggable({model: Asteroid.Collection.Light.ReserveDeck});
   $pile.contextMenu(["activate", "lose", "draw", "peek", "shuffle", "search"], "reserve-deck");
 }
 
