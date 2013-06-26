@@ -34,7 +34,7 @@
     $relatedInput = $(event.target).siblings().find("input");
     setTimeout(function() {
       $relatedInput.val("").focus();
-    }, 300);
+    }, 350);
   });
 
   $("ul.context-menu-items input").live("keyup", function(event, ui) {
