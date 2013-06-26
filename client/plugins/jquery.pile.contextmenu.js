@@ -1,5 +1,5 @@
 (function($) {
-  $.fn.contextMenu = function(items, name, options) {
+  $.fn.contextMenu = function(collection, items, name, options) {
     $this = $(this);
 
     $this.qtip({
@@ -16,7 +16,9 @@
                               var $relatedInput = $target.find("input");
                               var functionName = $target.find("a").attr("href").replace("#","");
                               var value = parseInt($relatedInput.val());
-                              console.log(functionName + " " + value);
+
+                              collection[functionName].call(collection, value);
+
                               $(".context-menu").hide();
                               event.preventDefault();
                             }
