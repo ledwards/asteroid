@@ -6,6 +6,10 @@ body {
 }
 
 #board {
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none;
   background-image: url('/background.jpg');
   background-position: center;
   height: 690px;
