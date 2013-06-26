@@ -1,9 +1,9 @@
 (function($) {
-  $.fn.reserveDeckMenu = function(options) {
+  $.fn.contextMenu = function(items, name, options) {
     $this = $(this);
 
     $this.qtip({
-      content: Asteroid.Menu.new(["activate", "lose", "draw", "peek", "shuffle", "search"], "reserve-deck"),
+      content: Asteroid.ContextMenu.new(items, name),
       position: { at: "top right", viewport: $("#board"), adjust: { x: 10, y: 2, method: "shift" } },
       style: { classes: "qtip-light context-menu", tip: false },
       show: { event: "contextmenu", solo: true },
@@ -26,18 +26,18 @@
     });
 
     return this;
-  }
+  };
+
+  $("ul.context-menu-items li").live("hover", function(event, ui) {
+    $relatedInput = $(event.target).siblings().find("input");
+    setTimeout(function() {
+      $relatedInput.val("").focus();
+    }, 300);
+  });
+
+  $("ul.context-menu-items input").live("keyup", function(event, ui) {
+    if(event.keyCode == 13) { // Enter
+      $(this).closest("ul").closest("li").click();
+    }
+  });
 })(jQuery);
-
-$("ul.context-menu-items li").live("hover", function(event, ui) {
-  $relatedInput = $(event.target).siblings().find("input");
-  setTimeout(function() {
-    $relatedInput.val("").focus();
-  }, 300);
-});
-
-$("ul.context-menu-items input").live("keyup", function(event, ui) {
-  if(event.keyCode == 13) { // Enter
-    $(this).closest("ul").closest("li").click();
-  }
-});
