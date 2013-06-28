@@ -6,7 +6,7 @@
       content: Asteroid.ContextMenu.new(items, name),
       position: { at: "top right", viewport: $("#board"), adjust: { x: 10, y: 2, method: "shift" } },
       style: { classes: "qtip-light context-menu", tip: false },
-      show: { event: "contextmenu", solo: true },
+      show: { event: "click", solo: true },
       hide: { event: "unfocus" },
       events: {
         render: function() {

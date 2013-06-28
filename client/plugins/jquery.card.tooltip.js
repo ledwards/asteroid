@@ -7,8 +7,8 @@
       content: "<img src='" + fullSizeImageURL + "'/>",
       position: { viewport: $("#board") },
       style: { classes: "qtip-light card-enlarged", width: "auto", height: "auto", tip: false },
-      show: { delay: 500, solo: true },
-      hide: { event: "click mouseleave" }
+      show: { event: "dblclick", solo: true },
+      hide: { event: "unfocus" }
     });
 
     return this;
