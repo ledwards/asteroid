@@ -17,7 +17,12 @@
                               var functionName = $target.find("a").attr("href").replace("#","");
                               var value = parseInt($relatedInput.val());
 
-                              collection[functionName].call(collection, value);
+                              if(functionName == "peek") {
+                                $("#peek-window").show().trigger('peek', [collection, value]);
+                              }
+                              else {
+                                collection[functionName].call(collection, value);
+                              }
 
                               $(".context-menu").hide();
                               event.preventDefault();
@@ -27,7 +32,7 @@
       }
     });
 
-    return this;
+    return $this;
   };
 
   $("ul.context-menu-items li").live("hover", function(event, ui) {

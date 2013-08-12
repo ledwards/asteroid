@@ -1,6 +1,7 @@
 (function($) {
   $.fn.tableDroppable = function(options) {
     this.droppable({
+      accept: ".card, .pile",
       drop: function(event, ui) {
               $card = $(ui.helper);
               side = $card.side();

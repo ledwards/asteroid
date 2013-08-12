@@ -34,4 +34,10 @@ Template.game.rendered = function() {
   $(this.firstNode).tableDroppable();
   $("#dark-hand").handDroppable({model: Asteroid.Collection.Dark.Hand});
   $("#light-hand").handDroppable({model: Asteroid.Collection.Light.Hand});
+
+  $("#peek-window").hide().draggable({});
+}
+
+Template.game.created = function() {
+  Asteroid.UI.init();
 }
